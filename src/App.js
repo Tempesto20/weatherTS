@@ -20,10 +20,10 @@ import rainN from './assets/img/rainN.png'; // дождь   10n
 import thunderstormN from './assets/img/thunderstormN.png'; // гроза   11n
 import snowN from './assets/img/snowN.png'; // снег    13n         
 import mistN from './assets/img/mistN.png'; // туман   50n
-
-import snowG from './assets/gif/snow.gif';
-import rainG from './assets/gif/rain.gif'; // дождь   10n     
+ 
 import sunB from './assets/background/sun.jpg';
+import skyBack from './assets/gif/skyBack.gif';
+
 
 import backgroundB from './assets/background/background.jpg'; // чистое небо   01d
 import fewCloudsB from './assets/background/fewClouds.jpg'; // несколько облаков   02n
@@ -59,7 +59,7 @@ const App = () => {
           const data = resp.data.list.slice(0, 1);
           // const data = resp.data.city.name;
           setCatLength(data);
-          // console.log(data);
+          console.log(data);
         });
     } catch (error) {
       console.log(error + 'Header');
@@ -96,13 +96,15 @@ const App = () => {
         img = sunB;
         break;
       case '02d':
-        img = fewCloudsB;
+        // img = fewCloudsB;
+        img = skyBack;        
         break;
       case '03d':
         img = scatteredCloudsB;
         break;
       case '04d':
-        img = brokenCloudsB;
+        img = skyBack;
+        // img = brokenCloudsB;
         break;
       case '09d':
         img = showerRainB;
@@ -287,7 +289,6 @@ const App = () => {
 
         </div>
       </div>
-      {/* </Gisf> */}
     </div>
   );
 }
