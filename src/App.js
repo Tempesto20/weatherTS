@@ -10,7 +10,7 @@ import rain from './assets/img/rain.png'; // дождь   10d
 import thunderstorm from './assets/img/thunderstorm.png'; // гроза   11d
 import snow from './assets/img/snow.png'; // снег    13d         
 import mist from './assets/img/mist.png'; // туман   50d
-import cat from './assets/img/cat.jpg';
+// import cat from './assets/img/cat.jpg';
 import clearSkyN from './assets/img/clearSkyN.png'; // чистое небо   01n
 import fewCloudsN from './assets/img/fewCloudsN.png'; // несколько облаков   02n
 import scatteredCloudsN from './assets/img/scatteredCloudsN.png'; // рассеянные облака   03n 
@@ -20,20 +20,30 @@ import rainN from './assets/img/rainN.png'; // дождь   10n
 import thunderstormN from './assets/img/thunderstormN.png'; // гроза   11n
 import snowN from './assets/img/snowN.png'; // снег    13n         
 import mistN from './assets/img/mistN.png'; // туман   50n
+
+// import backgroundB from './assets/background/background.jpg'; // чистое небо   01d
+// import fewCloudsB from './assets/background/fewClouds.jpg'; // несколько облаков   02n
+// import scatteredCloudsB from './assets/background/scatteredClouds.jpg'; // рассеянные облака   03d 
+// import brokenCloudsB from './assets/background/brokenClouds.jpg'; // разбитые облака   04n
+// import showerRainB from './assets/background/showerRain.jpg'; // душ дождь   09n
+// import rainB from './assets/background/rain.jpg'; // дождь   10n               
+// import thunderstormB from './assets/background/thunderstorm.jpg'; // гроза   11n
+// import snowB from './assets/background/snow.jpg'; // снег    13d 
+// import mistB from './assets/background/mist.jpg'; // туман   50n
+
  
-import sunB from './assets/background/sun.jpg';
-import skyBack from './assets/gif/skyBack.gif';
+// import sunB from './assets/background/sun.jpg';
 
+import skyClearBack from './assets/gif/sky.gif'; // чистое небо   01n
+import fewCloudsBack from './assets/gif/skyB.gif'; // несколько облаков   02n
+import scatteredCloudsBack from './assets/gif/brokenCloudsBack.gif'; // рассеянные облака   03n 
+import brokenCloudsBack from './assets/gif/brokenCloudsBack.gif'; // разбитые облака   04n
+import showerRainBack  from './assets/gif/rainF.gif'; // душ дождь   09n
+import rainBack  from './assets/gif/rainStreat.gif'; // дождь   10n               
+import thunderstormBack from './assets/gif/tempesto.gif'; // гроза   11n
+import snowBack from './assets/gif/snowF.gif'; // снег    13n         
+import mistBack from './assets/gif/mistF.gif'; // туман   50n
 
-import backgroundB from './assets/background/background.jpg'; // чистое небо   01d
-import fewCloudsB from './assets/background/fewClouds.jpg'; // несколько облаков   02n
-import scatteredCloudsB from './assets/background/scatteredClouds.jpg'; // рассеянные облака   03d 
-import brokenCloudsB from './assets/background/brokenClouds.jpg'; // разбитые облака   04n
-import showerRainB from './assets/background/showerRain.jpg'; // душ дождь   09n
-import rainB from './assets/background/rain.jpg'; // дождь   10n               
-import thunderstormB from './assets/background/thunderstorm.jpg'; // гроза   11n
-import snowB from './assets/background/snow.jpg'; // снег    13d 
-import mistB from './assets/background/mist.jpg'; // туман   50n
 
 const App = () => {
   const [catLength, setCatLength] = React.useState([]);
@@ -85,7 +95,7 @@ const App = () => {
 
   const Background = () => {
     return (
-      <img src={backgroundB} className='background'></img>
+      <img src={skyClearBack} className='background'></img>
     );
   };
 
@@ -93,63 +103,79 @@ const App = () => {
     let img = "";
     switch (props.weatherIcon) {
       case '01d':
-        img = sunB;
+        // img = sunB;
+        img = skyClearBack;
         break;
       case '02d':
         // img = fewCloudsB;
-        img = skyBack;        
+        img = fewCloudsBack;        
         break;
       case '03d':
-        img = scatteredCloudsB;
+        // img = scatteredCloudsB;
+        img = scatteredCloudsBack;  
         break;
       case '04d':
-        img = skyBack;
+        img = brokenCloudsBack;
         // img = brokenCloudsB;
         break;
       case '09d':
-        img = showerRainB;
+        // img = showerRainB;
+        img = showerRainBack;
         break;
       case '10d':
-        img = rainB;
+        // img = rainB;
+        img = rainBack;
         break;
       case '11d':
-        img = thunderstormB;
+        // img = thunderstormB;
+        img = thunderstormBack;
         break;
       case '13d':
-        img = snowB;
+        // img = snowB;
+        img = snowBack;
         break;
       case '50d':
-        img = mistB;
+        // img = mistB;
+        img = mistBack;
         break;
       case '01n':
-        img = sunB;
+        // img = sunB;
+        img = skyClearBack;
         break;
       case '02n':
-        img = fewCloudsB;
+        img = fewCloudsBack;
         break;
       case '03n':
-        img = scatteredCloudsB;
+        // img = scatteredCloudsB;
+        img = scatteredCloudsBack;
         break;
       case '04n':
-        img = brokenCloudsB;
+        // img = brokenCloudsB;
+        img = brokenCloudsBack; 
         break;
       case '09n':
-        img = showerRainB;
+        // img = showerRainB;
+        img = showerRainBack;
         break;
       case '10n':
-        img = rainB;
+        // img = rainB;
+        img = rainBack;
         break;
       case '11n':
-        img = thunderstormB;
+        // img = thunderstormB;
+        img = thunderstormBack;
         break;
       case '13n':
-        img = snowB;
+        // img = sunB;
+        img = snowBack;
         break;
       case '50n':
-        img = mistB;
+        // img = mistB;
+        img = mistBack;
         break;
       case '':
-        img = mistB;
+        // img = mistB;
+        img = mistBack;
         break;
     }
     return (
@@ -170,6 +196,7 @@ const App = () => {
         break;
       case '03d':
         img = scatteredClouds;
+        // img = skyBack;      
         break;
       case '04d':
         img = brokenClouds;
